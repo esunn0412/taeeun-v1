@@ -1,6 +1,7 @@
 import type { ProjectType } from "@/types";
 import Image from "next/image";
 import Skill from "@/components/ui/Skill";
+import { FaLink, FaGithub } from "react-icons/fa";
 
 const projects: ProjectType[] = [
   {
@@ -17,18 +18,20 @@ const projects: ProjectType[] = [
     ],
     image: "/wow.png",
     url: "https://wowcentreville.com/",
+    github: "https://github.com/project-emory/wow-centreville/tree/main",
   },
   {
     title: "Rendezvous",
     description:
-      "Pinterest and Reddit-inspired full-stack featuring CRUD operations, user authentication, and deployed on AWS via Docker.",
+      "Pinterest and Reddit-inspired full-stack featuring CRUD operations, user authentication, and deployed on AWS via Docker. Currently down due to costs.",
     technologies: ["Django", "Docker", "AWS EC2", "Bootstrap", "HTML/CSS"],
     image: "/ren.png",
+    github: "https://github.com/esunn0412/rendezvous",
   },
   {
     title: "Good Hangul",
     description:
-      "Korean grammar error correction platform powered by the finetuned sLLM research model: nllb-200-ko-gec-3.3B. Built a Chrome Extension that automatically detects inputs and displays correction retrieved from koGEC API.",
+      "Korean grammar error correction platform powered by the finetuned sLLM research model: nllb-200-ko-gec-3.3B. Built a Chrome Extension that automatically detects inputs and displays correction retrieved from koGEC API. Repo under company assets.",
     technologies: [
       "Flask",
       "Python",
@@ -39,6 +42,7 @@ const projects: ProjectType[] = [
     ],
     image: "/goodhangul.png",
     url: "https://goodhangul.sionic.ai/",
+    github: "",
   },
 ];
 
@@ -66,22 +70,27 @@ const Projects = () => {
             </div>
 
             <div>
-              {project.url ? (
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block"
-                >
-                  <h3 className="text-2xl font-semibold white group-hover:text-[var(--highlight)] transition-all duration-200">
-                    {project.title}
-                  </h3>
-                </a>
-              ) : (
-                <h3 className="text-2xl font-semibold white group-hover:text-[var(--highlight)] transition-all duration-200">
-                  {project.title}
-                </h3>
-              )}
+              <h3 className="text-2xl font-semibold white group-hover:text-[var(--highlight)] transition-all duration-200 flex items-baseline gap-4">
+                {project.title}
+                {project.url && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaLink className="text-base" />
+                  </a>
+                )}
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub className="text-base" />
+                  </a>
+                )}
+              </h3>
               <p className="mt-2 text-gray-300">{project.description}</p>
               <div className="flex flex-wrap gap-4 mt-4">
                 {project.technologies.map((tech, index) => (

@@ -9,6 +9,9 @@ export interface ExperienceType {
   company: string;
   period: string;
   description: string;
+  technologies: string[];
+  url: string;
+  links?: { name: string; url: string }[];
 }
 
 export interface ProjectType {

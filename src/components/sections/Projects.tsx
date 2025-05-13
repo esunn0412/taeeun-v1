@@ -66,12 +66,12 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="inline-block"
                 >
-                  <h3 className="text-2xl font-semibold white group-hover:text-blue-300 transition-all duration-200">
+                  <h3 className="text-2xl font-semibold white group-hover:text-[var(--highlight)] transition-all duration-200">
                     {project.title}
                   </h3>
                 </a>
               ) : (
-                <h3 className="text-2xl font-semibold white group-hover:text-blue-300 transition-all duration-200">
+                <h3 className="text-2xl font-semibold white group-hover:text-[var(--highlight)] transition-all duration-200">
                   {project.title}
                 </h3>
               )}

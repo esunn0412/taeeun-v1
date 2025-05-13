@@ -36,6 +36,10 @@ const Tagline = () => {
             setCharIndex(0);
             setIsTyping(true);
           }, 500);
+
+          if (wordIndex == words.length - 2) {
+            setTimeout(() => {}, 10000);
+          }
         }
       }, 100); // Adjust speed of typing here
     }
@@ -49,7 +53,7 @@ const Tagline = () => {
     <div>
       <p className="pl-2 text-xl">
         {displayText}
-        <span className="inline-block w-1 h-5 ml-1 bg-black animate-pulse">
+        <span className="inline-block w-1 h-5 ml-1 bg-[var(--background)] animate-pulse">
           &nbsp;
         </span>
       </p>

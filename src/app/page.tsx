@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <main className="max-w-screen-lg mx-auto px-4 mb-52 tracking-wide">
+      <main className="max-w-screen-lg mx-auto px-4 mb-24 tracking-wide">
         <About />
 
         <Divider />

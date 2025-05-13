@@ -1,4 +1,6 @@
 import type { ExperienceType } from "@/types";
+import { FaLink } from "react-icons/fa";
+import Skill from "../ui/Skill";
 
 const experiences: ExperienceType[] = [
   {
@@ -29,18 +31,12 @@ const experiences: ExperienceType[] = [
       "Python",
       "PyTorch",
       "FlagEmbedding",
-      "Faiss",
+      "FAISS",
       "Pandas",
       "Git",
     ],
     url: "https://www.sionic.ai/",
-    links: [
-      { name: "Report", url: "/hnm.pdf" },
-      {
-        name: "KoGEC Model",
-        url: "https://huggingface.co/sionic-ai/nllb-200-ko-gec-3.3B",
-      },
-    ],
+    links: [{ name: "Report", url: "/hnm.pdf" }],
   },
   {
     title: "ML Research Summer Intern",
@@ -52,7 +48,10 @@ const experiences: ExperienceType[] = [
     url: "https://www.sionic.ai/",
     links: [
       { name: "Paper", url: "/paclic.pdf" },
-      { name: "Blog", url: "https://goodhangul.sionic.ai/blog" },
+      {
+        name: "KoGEC Model",
+        url: "https://huggingface.co/sionic-ai/nllb-200-ko-gec-3.3B",
+      },
     ],
   },
 ];
@@ -81,10 +80,34 @@ const Experience = () => {
                 <h3 className=" text-gray-300">{exp.period}</h3>
               </div>
               <div className="flex-3">
-                <h3 className="text-xl font-semibold white group-hover:text-[var(--highlight)] transition-all duration-200">
-                  {exp.title} • {exp.company}
-                </h3>
-                <p className="mt-2 text-gray-300">{exp.description}</p>
+                <a href={exp.url} target="_blank" rel="noopener noreferrer">
+                  <h3 className="text-xl font-semibold white group-hover:text-[var(--highlight)] transition-all duration-200">
+                    {exp.title} • {exp.company}
+                  </h3>
+                  <p className="mt-2 text-gray-300">{exp.description}</p>
+                </a>
+                {exp.links && (
+                  <div className="flex flex-wrap gap-6 mt-4">
+                    {exp.links.map((link, index) => (
+                      <a
+                        key={`link-${index}`}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-300 hover:text-[var(--highlight)] transition-all duration-200 flex items-center"
+                      >
+                        <FaLink className="text-xs mr-2" />
+                        {link.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+
+                <div className="flex flex-wrap gap-4 mt-4">
+                  {exp.technologies.map((tech, index) => (
+                    <Skill key={`exp-skill-${index}`} name={tech} />
+                  ))}
+                </div>
               </div>
             </div>
           </div>

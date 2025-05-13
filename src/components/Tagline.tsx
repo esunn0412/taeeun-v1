@@ -36,10 +36,6 @@ const Tagline = () => {
             setCharIndex(0);
             setIsTyping(true);
           }, 500);
-
-          if (wordIndex == words.length - 2) {
-            setTimeout(() => {}, 10000);
-          }
         }
       }, 100); // Adjust speed of typing here
     }

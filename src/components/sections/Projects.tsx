@@ -31,7 +31,7 @@ const projects: ProjectType[] = [
       "Pocketbase DB",
     ],
     image: "/goodhangul.png",
-    url: "https://goodhangul.sionic.ai/blog",
+    url: "https://goodhangul.sionic.ai/",
   },
 ];
 
@@ -78,7 +78,7 @@ const Projects = () => {
               <p className="mt-2 text-gray-300">{project.description}</p>
               <div className="flex flex-wrap gap-4 mt-4">
                 {project.technologies.map((tech, index) => (
-                  <Skill key={`skill-${index}`} name={tech} />
+                  <Skill key={`proj-skill-${index}`} name={tech} />
                 ))}
               </div>
             </div>

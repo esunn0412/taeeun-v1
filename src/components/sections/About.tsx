@@ -55,9 +55,38 @@ const About = () => {
         <Tagline />
       </div>
 
-      <p className="flex-2 mt-4 text-gray-300 max-w-xl">
-        I am an aspiring software engineer and AI enthusiast. I am a rising
-        Junior in Emory University studying Mathematics and Computer Science.
+      <p className="flex-1 mt-4 text-gray-300 max-w-xl">
+        I’m a student developer and AI researcher who firmly believes that even
+        the most advanced AI is meaningless without a platform or application
+        that brings it to life for real users. I strive to bridge that gap,
+        leveraging AI to build experiences that has tangible impact on the
+        general public.
+        <br />
+        <br />
+        I&apos;m currently a rising junior at Emory University, studying
+        Mathematics and Computer Science. As Co-Hackathon Director and Project
+        Lead at{" "}
+        <a
+          href="https://www.linkedin.com/company/project-emory"
+          className="text-[var(--highlight)]"
+        >
+          Project Emory
+        </a>
+        , I organized{" "}
+        <a
+          href="https://www.linkedin.com/posts/project-emory_emoryhacks2025-hackathon-techinnovation-activity-7311186895395332096-R-uR/"
+          className="text-[var(--highlight)]"
+        >
+          Emory&apos;s first-ever CS Hackathon
+        </a>{" "}
+        with an amazing team and led a student team to build a website for a
+        local business. Now, as Vice President of Project Emory, I’m focused on
+        building a community of curious, driven, and collaborative students, to
+        support and encourage everyone on their journey.
+        <br />
+        <br /> In my free time, I am honing my muay thai and kickboxing skills,
+        singing and playing guitar, cafe hopping for a good cup of latte, crying
+        to great movies, or eating good food with good people.
       </p>
       <div className="absolute bottom-12 left-0 container mx-auto">
         <div className="flex gap-4 pt-4">

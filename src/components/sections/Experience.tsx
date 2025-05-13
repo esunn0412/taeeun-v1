@@ -1,6 +1,6 @@
-import type { Experience } from "@/types";
+import type { ExperienceType } from "@/types";
 
-const experiences: Experience[] = [
+const experiences: ExperienceType[] = [
   {
     title: "Django Backend Engineer Intern",
     company: "Park My Ride",

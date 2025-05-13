@@ -4,14 +4,14 @@ export interface SocialLink {
   icon: string;
 }
 
-export interface Experience {
+export interface ExperienceType {
   title: string;
   company: string;
   period: string;
   description: string;
 }
 
-export interface Project {
+export interface ProjectType {
   title: string;
   description: string;
   image: string;

@@ -1,8 +1,8 @@
-import type { Project } from "@/types";
+import type { ProjectType } from "@/types";
 import Image from "next/image";
 import Skill from "@/components/ui/Skill";
 
-const projects: Project[] = [
+const projects: ProjectType[] = [
   {
     title: "WOW Centreville",
     description:

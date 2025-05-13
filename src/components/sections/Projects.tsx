@@ -7,7 +7,14 @@ const projects: ProjectType[] = [
     title: "WOW Centreville",
     description:
       "Full-stack ordering platform for local business, streamlining order management and online payment.",
-    technologies: ["TypeScript", "Tailwind CSS", "Django", "Stripe", "Figma"],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Django",
+      "Stripe",
+      "Figma",
+    ],
     image: "/wow.png",
     url: "https://wowcentreville.com/",
   },
@@ -15,7 +22,7 @@ const projects: ProjectType[] = [
     title: "Rendezvous",
     description:
       "Pinterest and Reddit-inspired full-stack featuring CRUD operations, user authentication, and deployed on AWS via Docker.",
-    technologies: ["Docker", "AWS EC2", "Bootstrap", "Django", "HTML/CSS"],
+    technologies: ["Django", "Docker", "AWS EC2", "Bootstrap", "HTML/CSS"],
     image: "/ren.png",
   },
   {

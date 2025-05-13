@@ -1,5 +1,8 @@
 import Tagline from "../Tagline";
-import { Mail, Github, Linkedin, type LucideIcon } from "lucide-react";
+import { IconType } from "react-icons";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { LuMail } from "react-icons/lu";
+import { FiFileText } from "react-icons/fi";
 import { SocialLink } from "@/types";
 
 const links: SocialLink[] = [
@@ -18,12 +21,24 @@ const links: SocialLink[] = [
     url: "https://www.linkedin.com/in/taeeunnkim/",
     icon: "linkedin",
   },
+  {
+    platform: "Instagram",
+    url: "https://www.instagram.com/taeeun.k__/",
+    icon: "instagram",
+  },
+  {
+    platform: "Resume",
+    url: "/resume.pdf",
+    icon: "resume",
+  },
 ];
 
-const iconMap: Record<string, LucideIcon> = {
-  mail: Mail,
-  github: Github,
-  linkedin: Linkedin,
+const iconMap: Record<string, IconType> = {
+  mail: LuMail,
+  github: FaGithub,
+  linkedin: FaLinkedin,
+  instagram: FaInstagram,
+  resume: FiFileText,
 };
 
 const About = () => {
@@ -38,7 +53,6 @@ const About = () => {
           Atlanta, United States | Seoul, Korea
         </p>
         <Tagline />
-        {/* <SocialLinks links={socialLinks} /> */}
       </div>
 
       <p className="flex-2 mt-4 text-gray-300 max-w-xl">

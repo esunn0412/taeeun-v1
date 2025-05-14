@@ -48,8 +48,8 @@ const About = () => {
       className="relative h-screen flex flex-row justify-center items-center tracking-wide"
     >
       <div className="space-y-4 flex-1">
-        <h1 className="text-7xl m-0 mb-1">Taeeun Kim</h1>
-        <p className="pl-2 text-lg text-gray-400">
+        <h1 className="text-7xl m-0 mb-2">Taeeun Kim</h1>
+        <p className="pl-2 text-md text-gray-400">
           Atlanta, United States | Seoul, Korea
         </p>
         <Tagline />

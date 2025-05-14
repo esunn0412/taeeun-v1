@@ -47,7 +47,7 @@ const Tagline = () => {
 
   return (
     <div>
-      <p className="pl-2 text-xl">
+      <p className="pl-2 text-xl ">
         {displayText}
         <span className="inline-block w-1 h-5 ml-1 bg-[var(--background)] animate-pulse">
           &nbsp;

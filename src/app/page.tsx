@@ -1,8 +1,16 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import { About, Experience, Projects } from "@/components/sections";
 import Divider from "@/components/ui/Divider";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    document.body.scrollTop = 0; // for safari
+    document.documentElement.scrollTop = 0; // for chrome, firefox, ie and opera
+  }, []);
+
   return (
     <div>
       <Navbar />

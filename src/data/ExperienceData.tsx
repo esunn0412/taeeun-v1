@@ -6,7 +6,7 @@ const ExperienceData: ExperienceType[] = [
     company: "Park My Ride",
     period: "Jan, 2025 - May, 2025",
     description:
-      "Develop core backend logic for a valet-driving app, managing database interactions, authentication, and CI/CD pipelines. Collaborate with front-end developers in a Scrum environment, applying quality assurance practices in a team of four.",
+      "Designed and developed relational models, role-based JWT email auth, and API endpoints for a valet-driving platform. Managed environment-based configuration and database migration workflows across dev, staging, and production, reducing deployment errors by 80%.",
     technologies: ["Django", "Python", "AWS Lightsail", "PostgresSQL", "Git"],
     url: "https://parkmyride.io/",
   },

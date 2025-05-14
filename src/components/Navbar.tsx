@@ -3,7 +3,7 @@ const Navbar = () => {
     <nav className="transform-all duration-300 ease-in-out tracking-widest flex justify-between items-center py-6 px-10 fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
       <a
         href="#"
-        className="cursor-pointer font-bold flex space-x-0.5 group transition-transform duration-200 ease-out hover:scale-105"
+        className="cursor-pointer font-bold flex group transition-transform duration-200 ease-out hover:scale-105"
       >
         {"Taeeun Kim".split("").map((char, i) => (
           <span

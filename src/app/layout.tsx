@@ -20,6 +20,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Taeeun Kim</title>
+        <meta name="title" content="Taeeun Kim" />
+        <meta
+          name="description"
+          content="Taeeun Kim's personal portfolio website. Click to learn about me!"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://taeeunkim.vercel.app/" />
+        <meta property="og:title" content="Taeeun Kim" />
+        <meta
+          property="og:description"
+          content="Taeeun Kim's personal portfolio website. Click to learn about me!"
+        />
+        <meta property="og:image" content="/thumbnail.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://taeeunkim.vercel.app/" />
+        <meta property="twitter:title" content="Taeeun Kim" />
+        <meta
+          property="twitter:description"
+          content="Taeeun Kim's personal portfolio website. Click to learn about me!"
+        />
+        <meta property="twitter:image" content="/thumbnail.png" />
+      </head>
       <body className={`${inriaSans.variable}`}>{children}</body>
     </html>
   );

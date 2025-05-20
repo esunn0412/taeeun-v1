@@ -100,7 +100,7 @@ export default function Home() {
         <Projects />
 
         <Divider />
-        <div className="text-center text-gray-400 mt-4">
+        <div className="text-center text-[var(--description)] mt-4">
           made with tomatoes by Taeeun Kim © 2025
         </div>
       </main>

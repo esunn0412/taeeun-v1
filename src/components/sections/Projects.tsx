@@ -48,7 +48,9 @@ const Projects = () => {
                   </a>
                 )}
               </h3>
-              <p className="mt-2 text-gray-300">{project.description}</p>
+              <p className="mt-2 text-[var(--description)]">
+                {project.description}
+              </p>
               <div className="flex flex-wrap gap-4 mt-4">
                 {project.technologies.map((tech, index) => (
                   <Skill key={`proj-skill-${index}`} name={tech} />

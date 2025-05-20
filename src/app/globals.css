@@ -4,10 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --highlight: #90e0ef;
-  --gray: #969696;
+  --highlight: #00aaff;
+  --description: oklch(0.25 0 0);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
+  --background-rgb: 255, 255, 255;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -80,13 +81,6 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-rgb: 2, 5, 23;
-    --highlight: #90e0ef;
-  }
-}
-
 body {
   font-family: var(--font-inria-sans);
   caret-color: transparent;
@@ -98,7 +92,10 @@ body {
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --description: oklch(87.2% 0.01 258.338);
+  --highlight: #90e0ef;
+  --background: oklch(0.1247 0.0431 267.2);
+  --background-rgb: 2, 5, 23;
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);

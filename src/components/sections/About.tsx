@@ -49,13 +49,13 @@ const About = () => {
     >
       <div className="space-y-4 flex-1">
         <h1 className="text-7xl m-0 mb-2">Taeeun Kim</h1>
-        <p className="pl-2 text-md text-gray-400">
+        <p className="pl-2 text-md text-[var(--description)]">
           Atlanta, United States | Seoul, Korea
         </p>
         <Tagline />
       </div>
 
-      <p className="flex-1 mt-4 text-gray-300 max-w-xl">
+      <p className="flex-1 mt-4 text-[var(--description)] max-w-xl">
         I’m a student developer and AI researcher who firmly believes that even
         the most advanced AI is meaningless without a platform or application
         that brings it to life for real users. I strive to bridge that gap,
@@ -101,7 +101,9 @@ const About = () => {
                 rel="noopener noreferrer"
                 aria-label={link.platform}
               >
-                {Icon && <Icon className="h-6 w-6 hover:text-gray-300" />}
+                {Icon && (
+                  <Icon className="size-6 hover:text-[var(--description)] hover:scale-110 transition-transform duration-200" />
+                )}
               </a>
             );
           })}

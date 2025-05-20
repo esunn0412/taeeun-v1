@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inria_Sans } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
 
 const inriaSans = Inria_Sans({
   weight: ["300", "400", "700"],
@@ -46,7 +47,9 @@ export default function RootLayout({
         />
         <meta property="twitter:image" content="/thumbnail.png" />
       </head>
-      <body className={`${inriaSans.variable}`}>{children}</body>
+      <body className={`${inriaSans.variable}`}>
+        <ThemeProvider attribute="class">{children}</ThemeProvider>
+      </body>
     </html>
   );
 }

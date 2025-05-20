@@ -3,29 +3,30 @@
 import Navbar from "@/components/Navbar";
 import { About, Experience, Projects } from "@/components/sections";
 import Divider from "@/components/ui/Divider";
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
-  const lastScroll = useRef(0);
-  useEffect(() => {
-    const navbar = document.querySelector("nav");
+  // const lastScroll = useRef(0);
+  // useEffect(() => {
+  //   const navbar = document.querySelector("nav");
 
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
-      if (currentScroll > lastScroll.current && navbar) {
-        navbar.style.transform = "translateY(-100%)";
-      } else if (navbar) {
-        navbar.style.transform = "translateY(0)";
-      }
-      lastScroll.current = currentScroll;
-    };
+  //   const handleScroll = () => {
+  //     const currentScroll = window.scrollY;
+  //     if (currentScroll > lastScroll.current && navbar) {
+  //       navbar.style.transform = "translateY(-100%)";
+  //     } else if (navbar) {
+  //       navbar.style.transform = "translateY(0)";
+  //     }
+  //     lastScroll.current = currentScroll;
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   useEffect(() => {
     // Create cursor element

@@ -47,7 +47,7 @@ const ExperienceData: ExperienceType[] = [
     links: [
       { name: "Paper", url: "/paclic.pdf" },
       {
-        name: "KoGEC Model",
+        name: "Open-Sourced KoGEC Model",
         url: "https://huggingface.co/sionic-ai/nllb-200-ko-gec-3.3B",
       },
     ],

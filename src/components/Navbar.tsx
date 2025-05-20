@@ -6,8 +6,10 @@ import {
 } from "@radix-ui/react-dropdown-menu";
 import { Globe } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
+import { useTranslations } from "next-intl";
 
 const Navbar = () => {
+  const t = useTranslations("navbar");
   return (
     <nav className="w-full fixed top-0 left-0 right-0 z-50 backdrop-blur-sm py-6">
       <div className="max-w-screen-xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 tracking-widest transform-all duration-300 ease-in-out">
@@ -30,7 +32,7 @@ const Navbar = () => {
 
         <div className="cursor-pointer flex gap-12">
           <a className="hover:text-[var(--highlight)]" href="#">
-            About
+            {t("title")}
           </a>
           <a className="hover:text-[var(--highlight)]" href="#experience">
             Experience

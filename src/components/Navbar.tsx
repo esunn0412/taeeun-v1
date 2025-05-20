@@ -1,15 +1,21 @@
+"use client";
+import { Globe } from "lucide-react";
+import { ThemeToggle } from "./theme-toggle";
+import { useTranslation } from "react-i18next";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuTrigger,
   DropdownMenuItem,
+  DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
-import { Globe } from "lucide-react";
-import { ThemeToggle } from "./theme-toggle";
-import { useTranslations } from "next-intl";
 
 const Navbar = () => {
-  const t = useTranslations("navbar");
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <nav className="w-full fixed top-0 left-0 right-0 z-50 backdrop-blur-sm py-6">
       <div className="max-w-screen-xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 tracking-widest transform-all duration-300 ease-in-out">
@@ -32,27 +38,37 @@ const Navbar = () => {
 
         <div className="cursor-pointer flex gap-12">
           <a className="hover:text-[var(--highlight)]" href="#">
-            {t("title")}
+            {t("navbar.title")}
           </a>
           <a className="hover:text-[var(--highlight)]" href="#experience">
-            Experience
+            {t("navbar.experience")}
           </a>
           <a className="hover:text-[var(--highlight)]" href="#projects">
-            Projects
+            {t("navbar.projects")}
           </a>
         </div>
         <div className="flex items-center gap-8">
           <ThemeToggle />
           <DropdownMenu>
-            <DropdownMenuTrigger>
-              <Globe className="focus:outline-none focus:select-none cursor-pointer transition-transform duration-250 hover:scale-110" />
+            <DropdownMenuTrigger className="focus:outline-none">
+              <Globe className="focus:select-none cursor-pointer transition-transform duration-250 hover:scale-110" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="flex flex-col items-center border-none mt-2 gap cursor-pointer">
-              <DropdownMenuItem className="text-lg hover:outline-none">
-                KOR
+            <DropdownMenuContent className="flex flex-col gap-2 mt-4 items-center focus:select-none">
+              <DropdownMenuItem
+                onClick={() => changeLanguage("en")}
+                className={`focus:outline-none hover:outline-none cursor-pointer hover:scale-110 transition-transform duration-200 ${
+                  i18n.language === "en" ? "text-[var(--highlight)]" : ""
+                }`}
+              >
+                English
               </DropdownMenuItem>
-              <DropdownMenuItem className="text-lg hover:outline-none">
-                ENG
+              <DropdownMenuItem
+                onClick={() => changeLanguage("ko")}
+                className={`focus:outline-none hover:outline-none cursor-pointer hover:scale-110 transition-transform duration-200 ${
+                  i18n.language === "ko" ? "text-[var(--highlight)]" : ""
+                }`}
+              >
+                한국어
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

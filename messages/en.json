@@ -1,8 +1,17 @@
 {
   "navbar": {
-    "title": "About"
+    "title": "About",
+    "experience": "Experience",
+    "projects": "Projects"
   },
   "about": {
-    "desc": "About us"
+    "location": "Atlanta, United States | Seoul, Korea",
+    "description": "I'm a student developer and AI researcher who firmly believes that even the most advanced AI is meaningless without a platform or application that brings it to life for real users. I strive to bridge that gap, leveraging AI to build experiences that has tangible impact on the general public.",
+    "education": "I'm currently a rising junior at Emory University, studying Mathematics and Computer Science. As Co-Hackathon Director and Project Lead at <projectLink>Project Emory</projectLink>, I organized <hackathonLink>Emory's first-ever CS Hackathon</hackathonLink> with an amazing team and led a student team to build a website for a local business. Now, as Vice President of Project Emory, I’m focused on building a community of curious, driven, and collaborative students, to support and encourage everyone on their journey.",
+    "interests": "In my free time, I enjoy singing and playing guitar, cafe hopping for a good cup of latte, crying to great movies, or eating good food with good people."
+  },
+  "experience": {},
+  "footer": {
+    "copyright": "made with tomatoes by Taeeun Kim © 2025"
   }
 }

@@ -1,8 +1,17 @@
 {
   "navbar": {
-    "title": "Welcome"
+    "title": "소개",
+    "experience": "경력",
+    "projects": "프로젝트"
   },
   "about": {
-    "desc": "About us"
+    "location": "미국 애틀랜타 | 대한민국 서울",
+    "description": "저는 가장 진보된 AI도 실제 사용자들에게 가치를 전달하는 플랫폼이나 애플리케이션이 없다면 의미가 없다고 믿는 학생 개발자이자 AI 연구원입니다. 저는 AI를 활용하여 일반 대중에게 실질적인 영향을 미치는 경험을 구축하는 데 중점을 두고 있습니다.",
+    "education": "저는 현재 에모리 대학교에서 수학과 컴퓨터 과학을 전공하는 3학년 학생입니다. <projectLink>Project Emory</projectLink>에서 해커톤 공동 디렉터이자 프로젝트 리더로 활동하며, <hackathonLink>에모리 최초의 CS 해커톤</hackathonLink>을 조직하고 로컬 비즈니스 웹사이트를 제작하는 학생 팀을 이끌었습니다. 현재는 부회장으로서 열정적이고 협업적인 커뮤니티를 구축하고 있습니다.",
+    "interests": "컴퓨터와 싸우고 있지 않을 때에는 노래 부르기와 기타 연주, 다양한 카페의 라떼 투어, 영화 감상, 그리고 좋은 사람들과 맛있는 음식을 먹는 것을 좋아합니다."
+  },
+  "experience": {},
+  "footer": {
+    "copyright": "Taeeun Kim이 토마토와 함께 만들었습니다 © 2025"
   }
 }

@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Inria_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import { NextIntlClientProvider } from "next-intl";
-import { getLocale } from "next-intl/server";
+import Provider from "./provider";
 
 const inriaSans = Inria_Sans({
   weight: ["300", "400", "700"],
@@ -16,14 +15,13 @@ export const metadata: Metadata = {
   description: "Website Created by Taeeun Kim",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = await getLocale();
   return (
-    <html lang={locale}>
+    <html>
       <head>
         <title>Taeeun Kim</title>
         <meta name="title" content="Taeeun Kim" />
@@ -51,9 +49,9 @@ export default async function RootLayout({
         <meta property="twitter:image" content="/thumbnail.png" />
       </head>
       <body className={`${inriaSans.variable}`}>
-        <ThemeProvider attribute="class">
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
-        </ThemeProvider>
+        <Provider>
+          <ThemeProvider attribute="class">{children}</ThemeProvider>
+        </Provider>
       </body>
     </html>
   );

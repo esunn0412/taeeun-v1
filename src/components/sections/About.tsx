@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { LuMail } from "react-icons/lu";
 import { FiFileText } from "react-icons/fi";
 import { SocialLink } from "@/types";
+import { Trans, useTranslation } from "react-i18next";
 
 const links: SocialLink[] = [
   {
@@ -42,6 +43,7 @@ const iconMap: Record<string, IconType> = {
 };
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <section
       id="about"
@@ -50,43 +52,34 @@ const About = () => {
       <div className="space-y-4 flex-1">
         <h1 className="text-7xl m-0 mb-2">Taeeun Kim</h1>
         <p className="pl-2 text-md text-[var(--description)]">
-          Atlanta, United States | Seoul, Korea
+          {t("about.location")}
         </p>
         <Tagline />
       </div>
 
       <p className="flex-1 mt-4 text-[var(--description)] max-w-xl">
-        I’m a student developer and AI researcher who firmly believes that even
-        the most advanced AI is meaningless without a platform or application
-        that brings it to life for real users. I strive to bridge that gap,
-        leveraging AI to build experiences that has tangible impact on the
-        general public.
+        {t("about.description")}
         <br />
         <br />
-        I&apos;m currently a rising junior at Emory University, studying
-        Mathematics and Computer Science. As Co-Hackathon Director and Project
-        Lead at{" "}
-        <a
-          href="https://www.linkedin.com/company/project-emory"
-          className="text-[var(--highlight)]"
-        >
-          Project Emory
-        </a>
-        , I organized{" "}
-        <a
-          href="https://www.linkedin.com/posts/project-emory_emoryhacks2025-hackathon-techinnovation-activity-7311186895395332096-R-uR/"
-          className="text-[var(--highlight)]"
-        >
-          Emory&apos;s first-ever CS Hackathon
-        </a>{" "}
-        with an amazing team and led a student team to build a website for a
-        local business. Now, as Vice President of Project Emory, I’m focused on
-        building a community of curious, driven, and collaborative students, to
-        support and encourage everyone on their journey.
+        <Trans
+          i18nKey="about.education"
+          components={{
+            projectLink: (
+              <a
+                href="https://www.linkedin.com/company/project-emory"
+                className="text-[var(--highlight)]"
+              />
+            ),
+            hackathonLink: (
+              <a
+                href="https://www.linkedin.com/posts/project-emory_emoryhacks2025-hackathon-techinnovation-activity-7311186895395332096-R-uR/"
+                className="text-[var(--highlight)]"
+              />
+            ),
+          }}
+        />
         <br />
-        <br /> In my free time, I am honing my muay thai and kickboxing skills,
-        singing and playing guitar, cafe hopping for a good cup of latte, crying
-        to great movies, or eating good food with good people.
+        <br /> {t("about.interests")}
       </p>
       <div className="absolute bottom-12 left-0 container mx-auto">
         <div className="flex gap-4 pt-4">

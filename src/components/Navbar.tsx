@@ -1,3 +1,11 @@
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+  DropdownMenuItem,
+} from "@radix-ui/react-dropdown-menu";
+import { Globe } from "lucide-react";
+
 const Navbar = () => {
   return (
     <nav className="transform-all duration-300 ease-in-out tracking-widest flex justify-between items-center py-6 px-10 fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
@@ -29,7 +37,15 @@ const Navbar = () => {
           Projects
         </a>
       </div>
-      <div>Korean</div>
+      <DropdownMenu>
+        <DropdownMenuTrigger>
+          <Globe className="outline-none cursor-pointer transition-transform duration-250 hover:scale-110" />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          <DropdownMenuItem>Korean</DropdownMenuItem>
+          <DropdownMenuItem>English</DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </nav>
   );
 };
